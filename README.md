@@ -15,15 +15,14 @@
 
 # antd-pro: react + dva + roadhog
 * dva：redux + redux-saga + react-router  (基于 redux、redux-saga 和 react-router 的轻量级前端框架)
+dva-github：[https://github.com/dvajs/dva/blob/master/README_zh-CN.md]
+dva文档：[https://dvajs.com/guide/]
 ```
 dva/router：默认输出 react-router 接口， react-router-redux 的接口通过属性 routerRedux 输出。
 dva/saga：输出 redux-saga 的接口，主要用于用例的编写。（用例中需要用到 effects）。
 dva/fetch：异步请求库，输出 isomorphic-fetch 的接口。不和 dva 强绑定，可以选择任意的请求库
 dva/dynamic：解决组件动态加载问题的 util 方法。
-```
-dva-github：[https://github.com/dvajs/dva/blob/master/README_zh-CN.md]
-dva文档：[https://dvajs.com/guide/]
-```
+
 数据流向：
 数据的改变发生通常是通过用户交互行为或者浏览器行为（如路由跳转等）触发的，当此类行为会改变数据的时候可以通过 dispatch 发起一个 action，如果是同步行为会直接通过 Reducers 改变 State ，如果是异步行为（副作用）会先触发 Effects 然后流向 Reducers 最终改变 State，所以在 dva 中，数据流向非常清晰简明。
 
